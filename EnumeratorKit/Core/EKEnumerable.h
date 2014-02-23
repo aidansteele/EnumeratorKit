@@ -456,6 +456,8 @@
 #pragma mark Other methods
 /** @name Other methods */
 
+- (NSArray *)withIndex;
+
 /** Take elements from a collection */
 - (NSArray *)take:(NSInteger)number;
 

@@ -228,6 +228,15 @@
 
 #pragma mark Other methods
 
+- (NSArray *)withIndex;
+{
+  __block NSUInteger idx = 0;
+
+  return [self map:^id(id obj) {
+    return @[obj, @(idx++)];
+  }];
+}
+
 - (NSArray *)take:(NSInteger)number
 {
     NSMutableArray *result = [NSMutableArray array];
